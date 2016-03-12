@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>distance</key>
+		<string></string>
+		<key>description</key>
+		<string></string>
+		<key>icon</key>
+		<string></string>
+		<key>name</key>
+		<string>Calvin Klein</string>
+	</dict>
+	<dict>
+		<key>distance</key>
+		<string></string>
+		<key>description</key>
+		<string></string>
+		<key>icon</key>
+		<string></string>
+		<key>name</key>
+		<string>Armani</string>
+	</dict>
+	<dict>
+		<key>distance</key>
+		<string></string>
+		<key>description</key>
+		<string></string>
+		<key>icon</key>
+		<string></string>
+		<key>name</key>
+		<string>Zara</string>
+	</dict>
+	<dict>
+		<key>distance</key>
+		<string></string>
+		<key>description</key>
+		<string></string>
+		<key>icon</key>
+		<string></string>
+		<key>name</key>
+		<string>Fila</string>
+	</dict>
+</array>
+</plist>
