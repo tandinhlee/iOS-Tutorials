@@ -10,8 +10,6 @@ import UIKit
 
 
 class ViewController: UIViewController {
-    static let HEIGHT_LIST_CELL = CGFloat(96)
-    static let HEIGHT_LIST_CELL_COLAPSE = CGFloat(96)
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tabBar: UITabBar!
     
@@ -75,6 +73,8 @@ class ViewController: UIViewController {
             if (previousIndex >= 0) {
                 // valid previous index
                 self.displayData = NSArray(array: [self.rawData![previousIndex],self.rawData![self.selectedIndexPath!.row]])
+            } else {
+                self.displayData = NSArray(array: [self.rawData![self.selectedIndexPath!.row]])
             }
         } else {
             self.displayData = self.rawData
@@ -84,55 +84,131 @@ class ViewController: UIViewController {
 }
 extension ViewController : UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if (self.selectedIndexPath != nil) {
-            return self.displayData!.count + 1
-        } else {
-            return self.displayData!.count
-        }
+        return self.displayData!.count
+//        if (self.selectedIndexPath != nil) {
+//            return self.displayData!.count + 1
+//        } else {
+//            return self.displayData!.count
+//        }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if (self.selectedIndexPath != nil) {
-            var dictValueCell = self.displayData![indexPath.row] as? NSDictionary
-            if (indexPath.row == self.selectedIndexPath!.row + 1) {
-                dictValueCell = self.displayData![indexPath.row - 1] as? NSDictionary
-                let cell = tableView.dequeueReusableCellWithIdentifier("itemDetailCell", forIndexPath: indexPath) as! DetailItemCell
-                if (dictValueCell != nil) {
-                    cell.priceLabel.text = dictValueCell!["balance"] as? String
-                }
-                return cell
-            } else {
-                let cell = tableView.dequeueReusableCellWithIdentifier("itemListCell", forIndexPath: indexPath) as! ListItemCell
-                if (dictValueCell != nil) {
-                    cell.distanceLabel.text = dictValueCell!["distance"] as? String
-                    cell.descriptionLabel.text = dictValueCell!["description"] as? String
-                    cell.nameLabel.text = dictValueCell!["name"] as? String
-                    cell.iconBranchImageView.image = UIImage(named: (dictValueCell!["icon"] as? String)!)
-                }
-                return cell
-            }
-            
-        } else {
-            let dictValueCell = self.displayData![indexPath.row] as? NSDictionary
-            let cell = tableView.dequeueReusableCellWithIdentifier("itemListCell", forIndexPath: indexPath) as! ListItemCell
-            if (dictValueCell != nil) {
-                cell.distanceLabel.text = dictValueCell!["distance"] as? String
-                cell.descriptionLabel.text = dictValueCell!["description"] as? String
-                cell.nameLabel.text = dictValueCell!["name"] as? String
-                cell.iconBranchImageView.image = UIImage(named: (dictValueCell!["icon"] as? String)!)
-            }
-            return cell
+        let dictValueCell = self.displayData![indexPath.row] as? NSDictionary
+        let cell = tableView.dequeueReusableCellWithIdentifier("itemListCell", forIndexPath: indexPath) as! ListItemCell
+        if (dictValueCell != nil) {
+            cell.distanceLabel.text = dictValueCell!["distance"] as? String
+            cell.descriptionLabel.text = dictValueCell!["description"] as? String
+            cell.nameLabel.text = dictValueCell!["name"] as? String
+            cell.iconBranchImageView.image = UIImage(named: (dictValueCell!["icon"] as? String)!)
+            cell.colapseExpanseCell(false)
         }
+        return cell
+//        if (self.selectedIndexPath != nil) {
+//            var dictValueCell = self.displayData![indexPath.row] as? NSDictionary
+//            if (indexPath.row == self.selectedIndexPath!.row + 1) {
+//                dictValueCell = self.displayData![indexPath.row - 1] as? NSDictionary
+//                let cell = tableView.dequeueReusableCellWithIdentifier("itemDetailCell", forIndexPath: indexPath) as! DetailItemCell
+//                if (dictValueCell != nil) {
+//                    cell.priceLabel.text = dictValueCell!["balance"] as? String
+//                }
+//                return cell
+//            } else {
+//                let cell = tableView.dequeueReusableCellWithIdentifier("itemListCell", forIndexPath: indexPath) as! ListItemCell
+//                if (dictValueCell != nil) {
+//                    cell.distanceLabel.text = dictValueCell!["distance"] as? String
+//                    cell.descriptionLabel.text = dictValueCell!["description"] as? String
+//                    cell.nameLabel.text = dictValueCell!["name"] as? String
+//                    cell.iconBranchImageView.image = UIImage(named: (dictValueCell!["icon"] as? String)!)
+//                }
+//                cell.colapseExpanseCell(true)
+//                return cell
+//            }
+//            
+//        } else {
+//            let dictValueCell = self.displayData![indexPath.row] as? NSDictionary
+//            let cell = tableView.dequeueReusableCellWithIdentifier("itemListCell", forIndexPath: indexPath) as! ListItemCell
+//            if (dictValueCell != nil) {
+//                cell.distanceLabel.text = dictValueCell!["distance"] as? String
+//                cell.descriptionLabel.text = dictValueCell!["description"] as? String
+//                cell.nameLabel.text = dictValueCell!["name"] as? String
+//                cell.iconBranchImageView.image = UIImage(named: (dictValueCell!["icon"] as? String)!)
+//                cell.colapseExpanseCell(false)
+//            }
+//            return cell
+//        }
     }
     
 }
 
 extension ViewController : UITableViewDelegate {
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return ViewController.HEIGHT_LIST_CELL
+        if (self.selectedIndexPath != nil) {
+            return ListItemCell.HEIGHT_LIST_CELL_COLAPSE
+        } else {
+            return ListItemCell.HEIGHT_LIST_CELL
+        }
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if (self.selectedIndexPath != nil) {
+            self.addTableView(tableView, atIndex: self.selectedIndexPath!)
+        } else {
+            self.selectedIndexPath = indexPath
+            self.trimTableView(tableView, atIndex: indexPath)
+        }
+    }
+    
+    func trimTableView(tableView: UITableView, atIndex indexPath:NSIndexPath) {
+        let countData = self.displayData?.count
+        if (countData > 0) {
+            var delRowArray = [NSIndexPath]()
+            let beginTail = indexPath.row + 1
+            if (beginTail < (countData! - 1) ){
+                for var index = countData! - 1; index >= beginTail; --index {
+                    let indexDel = NSIndexPath(forRow: index, inSection: indexPath.section)
+                    delRowArray.append(indexDel)
+                }
+            }
+            let endHead = indexPath.row - 2
+            if endHead >= 0 {
+                for var index = endHead; index >= 0; --index {
+                    let indexDel = NSIndexPath(forRow: index, inSection: indexPath.section)
+                    delRowArray.append(indexDel)
+                }
+            }
+            self.fillData()
+            self.tableView.beginUpdates()
+            self.tableView.deleteRowsAtIndexPaths(delRowArray, withRowAnimation: UITableViewRowAnimation.Right)
+            self.tableView.endUpdates()
+        }
+    }
+    func addTableView(tableView: UITableView, atIndex indexPath:NSIndexPath) {
+        let countData = self.rawData?.count
+        if (countData > 0) {
+            var arrayIndexAdd = [NSIndexPath]()
+            let endHead = indexPath.row - 2
+            if endHead >= 0 {
+                for var index = 0; index <= endHead; ++index {
+                    let indexDel = NSIndexPath(forRow: index, inSection: indexPath.section)
+                    arrayIndexAdd.append(indexDel)
+                }
+            }
+            let beginTail = indexPath.row
+            
+            if (beginTail <= (countData! - 1) ){
+                for var index = beginTail; index < countData! - 1 ; ++index {
+                    let indexDel = NSIndexPath(forRow: index, inSection: indexPath.section)
+                    arrayIndexAdd.append(indexDel)
+                    
+                }
+            }
+            self.selectedIndexPath = nil
+            self.fillData()
+            self.tableView.beginUpdates()
+            self.tableView.insertRowsAtIndexPaths(arrayIndexAdd, withRowAnimation: UITableViewRowAnimation.Left)
+            self.tableView.endUpdates()
+            
+        }
         
     }
     
