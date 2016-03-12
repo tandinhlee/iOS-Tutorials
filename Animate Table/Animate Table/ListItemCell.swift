@@ -10,7 +10,7 @@ import UIKit
 
 class ListItemCell: UITableViewCell {
     static let HEIGHT_LIST_CELL = CGFloat(96)
-    static let HEIGHT_LIST_CELL_COLAPSE = CGFloat(96)
+    static let HEIGHT_LIST_CELL_COLAPSE = CGFloat(44)
 
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var iconBranchImageView: UIImageView!
