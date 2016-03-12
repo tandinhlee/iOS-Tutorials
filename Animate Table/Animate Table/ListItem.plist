@@ -4,43 +4,243 @@
 <array>
 	<dict>
 		<key>distance</key>
-		<string></string>
+		<string>50 m</string>
 		<key>description</key>
-		<string></string>
+		<string>Just do it</string>
 		<key>icon</key>
-		<string></string>
+		<string>nike.png</string>
 		<key>name</key>
-		<string>Calvin Klein</string>
+		<string>Nike</string>
+		<key>balance</key>
+		<string>$25.49</string>
 	</dict>
 	<dict>
 		<key>distance</key>
-		<string></string>
+		<string>100 m</string>
 		<key>description</key>
-		<string></string>
+		<string>A Future archive</string>
 		<key>icon</key>
-		<string></string>
+		<string>prada.png</string>
+		<key>name</key>
+		<string>Prada</string>
+		<key>balance</key>
+		<string>$25.49</string>
+	</dict>
+	<dict>
+		<key>distance</key>
+		<string>150 m</string>
+		<key>description</key>
+		<string>Runway</string>
+		<key>icon</key>
+		<string>gucci.png</string>
+		<key>name</key>
+		<string>Gucci</string>
+		<key>balance</key>
+		<string>$25.49</string>
+	</dict>
+	<dict>
+		<key>distance</key>
+		<string>200 m</string>
+		<key>description</key>
+		<string>The new man</string>
+		<key>icon</key>
+		<string>dior.png</string>
+		<key>name</key>
+		<string>Dior</string>
+		<key>balance</key>
+		<string>$25.49</string>
+	</dict>
+	<dict>
+		<key>distance</key>
+		<string>250 m</string>
+		<key>description</key>
+		<string>For walking on air</string>
+		<key>icon</key>
+		<string>hermes.png</string>
+		<key>name</key>
+		<string>Hermes</string>
+		<key>balance</key>
+		<string>$25.49</string>
+	</dict>
+	<dict>
+		<key>distance</key>
+		<string>300 m</string>
+		<key>description</key>
+		<string>Off the wall</string>
+		<key>icon</key>
+		<string>vans.png</string>
+		<key>name</key>
+		<string>Vans</string>
+		<key>balance</key>
+		<string>$25.49</string>
+	</dict>
+	<dict>
+		<key>distance</key>
+		<string>350 m</string>
+		<key>description</key>
+		<string>Boss everyone</string>
+		<key>icon</key>
+		<string>adidas.png</string>
+		<key>name</key>
+		<string>Adidas</string>
+		<key>balance</key>
+		<string>$25.49</string>
+	</dict>
+	<dict>
+		<key>distance</key>
+		<string>400 m</string>
+		<key>description</key>
+		<string>Life style in the heart of rome</string>
+		<key>icon</key>
+		<string>fendi.png</string>
+		<key>name</key>
+		<string>Fendi</string>
+		<key>balance</key>
+		<string>$25.49</string>
+	</dict>
+	<dict>
+		<key>distance</key>
+		<string>450 m</string>
+		<key>description</key>
+		<string>Monogram your trench coat</string>
+		<key>icon</key>
+		<string>burberry.png</string>
+		<key>name</key>
+		<string>Burberry</string>
+		<key>balance</key>
+		<string>$25.49</string>
+	</dict>
+	<dict>
+		<key>distance</key>
+		<string>500 m</string>
+		<key>description</key>
+		<string>A love to call your own</string>
+		<key>icon</key>
+		<string>cartier.png</string>
+		<key>name</key>
+		<string>Cartier</string>
+		<key>balance</key>
+		<string>$25.49</string>
+	</dict>
+	<dict>
+		<key>distance</key>
+		<string>550 m</string>
+		<key>description</key>
+		<string>Make a promise</string>
+		<key>icon</key>
+		<string>louisvuitton.png</string>
+		<key>name</key>
+		<string>Louis Vuitton</string>
+		<key>balance</key>
+		<string>$25.49</string>
+	</dict>
+	<dict>
+		<key>distance</key>
+		<string>600 m</string>
+		<key>description</key>
+		<string>True colors</string>
+		<key>icon</key>
+		<string>converse.png</string>
+		<key>name</key>
+		<string>Converse</string>
+		<key>balance</key>
+		<string>$25.49</string>
+	</dict>
+	<dict>
+		<key>distance</key>
+		<string>650 m</string>
+		<key>description</key>
+		<string>Small gift, big smile</string>
+		<key>icon</key>
+		<string>hellokitty.png</string>
+		<key>name</key>
+		<string>Hello Kitty</string>
+		<key>balance</key>
+		<string>$25.49</string>
+	</dict>
+	<dict>
+		<key>distance</key>
+		<string>700 m</string>
+		<key>description</key>
+		<string>Never miss a beat</string>
+		<key>icon</key>
+		<string>michaelkors.png</string>
+		<key>name</key>
+		<string>Michael Kors</string>
+		<key>balance</key>
+		<string>$25.49</string>
+	</dict>
+	<dict>
+		<key>distance</key>
+		<string>750 m</string>
+		<key>description</key>
+		<string>Coach 1941</string>
+		<key>icon</key>
+		<string>coach.png</string>
+		<key>name</key>
+		<string>Coach</string>
+		<key>balance</key>
+		<string>$25.49</string>
+	</dict>
+	<dict>
+		<key>distance</key>
+		<string>800 m</string>
+		<key>description</key>
+		<string>Introducing ClubRound</string>
+		<key>icon</key>
+		<string>rayban.png</string>
+		<key>name</key>
+		<string>Ray-Ban</string>
+		<key>balance</key>
+		<string>$25.49</string>
+	</dict>
+	<dict>
+		<key>distance</key>
+		<string>850 m</string>
+		<key>description</key>
+		<string>New Normal</string>
+		<key>icon</key>
+		<string>armani.png</string>
 		<key>name</key>
 		<string>Armani</string>
+		<key>balance</key>
+		<string>$25.49</string>
 	</dict>
 	<dict>
 		<key>distance</key>
-		<string></string>
+		<string>900 m</string>
 		<key>description</key>
-		<string></string>
+		<string>Spring 2016 campaign</string>
 		<key>icon</key>
-		<string></string>
+		<string>guess.png</string>
+		<key>name</key>
+		<string>Guess</string>
+		<key>balance</key>
+		<string>$25.49</string>
+	</dict>
+	<dict>
+		<key>distance</key>
+		<string>950 m</string>
+		<key>description</key>
+		<string>The spring style guide</string>
+		<key>icon</key>
+		<string>ralphlauren.png</string>
+		<key>name</key>
+		<string>Ralph Lauren</string>
+		<key>balance</key>
+		<string>$25.49</string>
+	</dict>
+	<dict>
+		<key>distance</key>
+		<string>1000 m</string>
+		<key>description</key>
+		<string>The spring report</string>
+		<key>icon</key>
+		<string>zara.png</string>
 		<key>name</key>
 		<string>Zara</string>
-	</dict>
-	<dict>
-		<key>distance</key>
-		<string></string>
-		<key>description</key>
-		<string></string>
-		<key>icon</key>
-		<string></string>
-		<key>name</key>
-		<string>Fila</string>
+		<key>balance</key>
+		<string>$25.49</string>
 	</dict>
 </array>
 </plist>

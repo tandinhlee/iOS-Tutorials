@@ -15,6 +15,26 @@
 		0D842FFB1C93EAD400AB71F5 /* ListItem.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0D842FFA1C93EAD400AB71F5 /* ListItem.plist */; };
 		0D8430041C948F4C00AB71F5 /* DetailItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8430031C948F4C00AB71F5 /* DetailItemCell.swift */; };
 		0D8430061C948F7400AB71F5 /* ListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8430051C948F7400AB71F5 /* ListItemCell.swift */; };
+		0D8430191C94A50F00AB71F5 /* adidas.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D8430071C94A50F00AB71F5 /* adidas.png */; };
+		0D84301A1C94A50F00AB71F5 /* armani.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D8430081C94A50F00AB71F5 /* armani.png */; };
+		0D84301B1C94A50F00AB71F5 /* burberry.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D8430091C94A50F00AB71F5 /* burberry.png */; };
+		0D84301C1C94A50F00AB71F5 /* cartier.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D84300A1C94A50F00AB71F5 /* cartier.png */; };
+		0D84301D1C94A50F00AB71F5 /* converse.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D84300B1C94A50F00AB71F5 /* converse.png */; };
+		0D84301E1C94A50F00AB71F5 /* dior.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D84300C1C94A50F00AB71F5 /* dior.png */; };
+		0D84301F1C94A50F00AB71F5 /* fendi.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D84300D1C94A50F00AB71F5 /* fendi.png */; };
+		0D8430201C94A50F00AB71F5 /* gucci.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D84300E1C94A50F00AB71F5 /* gucci.png */; };
+		0D8430211C94A50F00AB71F5 /* guess.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D84300F1C94A50F00AB71F5 /* guess.png */; };
+		0D8430221C94A50F00AB71F5 /* hellokitty.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D8430101C94A50F00AB71F5 /* hellokitty.png */; };
+		0D8430231C94A50F00AB71F5 /* hermes.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D8430111C94A50F00AB71F5 /* hermes.png */; };
+		0D8430241C94A50F00AB71F5 /* louisvuitton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D8430121C94A50F00AB71F5 /* louisvuitton.png */; };
+		0D8430251C94A50F00AB71F5 /* michaelkors.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D8430131C94A50F00AB71F5 /* michaelkors.png */; };
+		0D8430261C94A50F00AB71F5 /* nike.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D8430141C94A50F00AB71F5 /* nike.png */; };
+		0D8430271C94A50F00AB71F5 /* ralphlauren.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D8430151C94A50F00AB71F5 /* ralphlauren.png */; };
+		0D8430281C94A50F00AB71F5 /* rayban.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D8430161C94A50F00AB71F5 /* rayban.png */; };
+		0D8430291C94A50F00AB71F5 /* vans.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D8430171C94A50F00AB71F5 /* vans.png */; };
+		0D84302A1C94A50F00AB71F5 /* zara.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D8430181C94A50F00AB71F5 /* zara.png */; };
+		0D84302C1C94A5D100AB71F5 /* coach.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D84302B1C94A5D100AB71F5 /* coach.png */; };
+		0D84302E1C94A66F00AB71F5 /* prada.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D84302D1C94A66F00AB71F5 /* prada.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +48,26 @@
 		0D842FFA1C93EAD400AB71F5 /* ListItem.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ListItem.plist; sourceTree = "<group>"; };
 		0D8430031C948F4C00AB71F5 /* DetailItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailItemCell.swift; sourceTree = "<group>"; };
 		0D8430051C948F7400AB71F5 /* ListItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItemCell.swift; sourceTree = "<group>"; };
+		0D8430071C94A50F00AB71F5 /* adidas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adidas.png; sourceTree = "<group>"; };
+		0D8430081C94A50F00AB71F5 /* armani.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = armani.png; sourceTree = "<group>"; };
+		0D8430091C94A50F00AB71F5 /* burberry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = burberry.png; sourceTree = "<group>"; };
+		0D84300A1C94A50F00AB71F5 /* cartier.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cartier.png; sourceTree = "<group>"; };
+		0D84300B1C94A50F00AB71F5 /* converse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = converse.png; sourceTree = "<group>"; };
+		0D84300C1C94A50F00AB71F5 /* dior.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dior.png; sourceTree = "<group>"; };
+		0D84300D1C94A50F00AB71F5 /* fendi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fendi.png; sourceTree = "<group>"; };
+		0D84300E1C94A50F00AB71F5 /* gucci.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gucci.png; sourceTree = "<group>"; };
+		0D84300F1C94A50F00AB71F5 /* guess.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guess.png; sourceTree = "<group>"; };
+		0D8430101C94A50F00AB71F5 /* hellokitty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hellokitty.png; sourceTree = "<group>"; };
+		0D8430111C94A50F00AB71F5 /* hermes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hermes.png; sourceTree = "<group>"; };
+		0D8430121C94A50F00AB71F5 /* louisvuitton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = louisvuitton.png; sourceTree = "<group>"; };
+		0D8430131C94A50F00AB71F5 /* michaelkors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = michaelkors.png; sourceTree = "<group>"; };
+		0D8430141C94A50F00AB71F5 /* nike.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nike.png; sourceTree = "<group>"; };
+		0D8430151C94A50F00AB71F5 /* ralphlauren.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ralphlauren.png; sourceTree = "<group>"; };
+		0D8430161C94A50F00AB71F5 /* rayban.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rayban.png; sourceTree = "<group>"; };
+		0D8430171C94A50F00AB71F5 /* vans.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vans.png; sourceTree = "<group>"; };
+		0D8430181C94A50F00AB71F5 /* zara.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zara.png; sourceTree = "<group>"; };
+		0D84302B1C94A5D100AB71F5 /* coach.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coach.png; sourceTree = "<group>"; };
+		0D84302D1C94A66F00AB71F5 /* prada.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = prada.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +115,26 @@
 		0D842FFC1C946BA800AB71F5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0D84302D1C94A66F00AB71F5 /* prada.png */,
+				0D84302B1C94A5D100AB71F5 /* coach.png */,
+				0D8430071C94A50F00AB71F5 /* adidas.png */,
+				0D8430081C94A50F00AB71F5 /* armani.png */,
+				0D8430091C94A50F00AB71F5 /* burberry.png */,
+				0D84300A1C94A50F00AB71F5 /* cartier.png */,
+				0D84300B1C94A50F00AB71F5 /* converse.png */,
+				0D84300C1C94A50F00AB71F5 /* dior.png */,
+				0D84300D1C94A50F00AB71F5 /* fendi.png */,
+				0D84300E1C94A50F00AB71F5 /* gucci.png */,
+				0D84300F1C94A50F00AB71F5 /* guess.png */,
+				0D8430101C94A50F00AB71F5 /* hellokitty.png */,
+				0D8430111C94A50F00AB71F5 /* hermes.png */,
+				0D8430121C94A50F00AB71F5 /* louisvuitton.png */,
+				0D8430131C94A50F00AB71F5 /* michaelkors.png */,
+				0D8430141C94A50F00AB71F5 /* nike.png */,
+				0D8430151C94A50F00AB71F5 /* ralphlauren.png */,
+				0D8430161C94A50F00AB71F5 /* rayban.png */,
+				0D8430171C94A50F00AB71F5 /* vans.png */,
+				0D8430181C94A50F00AB71F5 /* zara.png */,
 				0D842FFA1C93EAD400AB71F5 /* ListItem.plist */,
 			);
 			name = Resources;
@@ -147,10 +207,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D84301C1C94A50F00AB71F5 /* cartier.png in Resources */,
+				0D84301E1C94A50F00AB71F5 /* dior.png in Resources */,
+				0D8430261C94A50F00AB71F5 /* nike.png in Resources */,
+				0D84302E1C94A66F00AB71F5 /* prada.png in Resources */,
+				0D8430271C94A50F00AB71F5 /* ralphlauren.png in Resources */,
+				0D8430191C94A50F00AB71F5 /* adidas.png in Resources */,
+				0D8430211C94A50F00AB71F5 /* guess.png in Resources */,
+				0D8430221C94A50F00AB71F5 /* hellokitty.png in Resources */,
+				0D8430201C94A50F00AB71F5 /* gucci.png in Resources */,
+				0D8430291C94A50F00AB71F5 /* vans.png in Resources */,
+				0D8430251C94A50F00AB71F5 /* michaelkors.png in Resources */,
+				0D8430231C94A50F00AB71F5 /* hermes.png in Resources */,
 				0D842FFB1C93EAD400AB71F5 /* ListItem.plist in Resources */,
+				0D84302C1C94A5D100AB71F5 /* coach.png in Resources */,
+				0D8430241C94A50F00AB71F5 /* louisvuitton.png in Resources */,
+				0D84301D1C94A50F00AB71F5 /* converse.png in Resources */,
 				0D842FEE1C91EB0800AB71F5 /* LaunchScreen.storyboard in Resources */,
+				0D8430281C94A50F00AB71F5 /* rayban.png in Resources */,
+				0D84301A1C94A50F00AB71F5 /* armani.png in Resources */,
 				0D842FEB1C91EB0800AB71F5 /* Assets.xcassets in Resources */,
+				0D84301B1C94A50F00AB71F5 /* burberry.png in Resources */,
 				0D842FE91C91EB0800AB71F5 /* Main.storyboard in Resources */,
+				0D84301F1C94A50F00AB71F5 /* fendi.png in Resources */,
+				0D84302A1C94A50F00AB71F5 /* zara.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
