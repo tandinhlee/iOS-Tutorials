@@ -8,8 +8,13 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
+    static let HEIGHT_LIST_CELL = CGFloat(44)
+    static let HEIGHT_LIST_CELL_EXPAND = CGFloat(96)
     
+    @IBOutlet weak var tabBar: UITabBar!
+    @IBOutlet weak var tableView: UITableView!
     // MARK: private propertise
     
     var viewDetailMode:Bool = false
@@ -69,7 +74,7 @@ extension ViewController : UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("myCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("itemListCell", forIndexPath: indexPath)
         cell.textLabel?.text = "cell at \(indexPath.row)"
         return cell;
     }
@@ -77,7 +82,19 @@ extension ViewController : UITableViewDataSource {
 }
 
 extension ViewController : UITableViewDelegate {
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return ViewController.HEIGHT_LIST_CELL
+    }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        
+    }
 }
+
+
 
 

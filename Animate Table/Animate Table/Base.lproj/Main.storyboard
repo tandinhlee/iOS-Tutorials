@@ -23,20 +23,13 @@
                                 <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" rowHeight="96" id="KIg-T1-em5">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemListCell" rowHeight="96" id="KIg-T1-em5" customClass="ListItemCell" customModule="Animate_Table" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="96"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KIg-T1-em5" id="len-QB-8jt">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="95"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Lb-93-id3">
-                                                    <rect key="frame" x="8" y="8" width="79" height="79"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="79" id="LgL-VP-tKd"/>
-                                                        <constraint firstAttribute="width" secondItem="5Lb-93-id3" secondAttribute="height" multiplier="1:1" id="ieO-HZ-hgd"/>
-                                                    </constraints>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HMV Calvin Harris Album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPX-Hq-n1j">
                                                     <rect key="frame" x="95" y="8" width="199" height="24"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
@@ -67,6 +60,13 @@
                                                     <color key="textColor" red="0.45882352939999999" green="0.45882352939999999" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Lb-93-id3">
+                                                    <rect key="frame" x="8" y="8" width="79" height="79"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="79" id="LgL-VP-tKd"/>
+                                                        <constraint firstAttribute="width" secondItem="5Lb-93-id3" secondAttribute="height" multiplier="1:1" id="ieO-HZ-hgd"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="XPX-Hq-n1j" firstAttribute="leading" secondItem="5Lb-93-id3" secondAttribute="trailing" constant="8" id="3nI-1F-ole"/>
@@ -82,8 +82,17 @@
                                                 <constraint firstItem="GLj-6A-nZX" firstAttribute="leading" secondItem="5Lb-93-id3" secondAttribute="trailing" constant="8" id="ztP-vf-LZ5"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="distanceLabel" destination="CSX-gl-JA7" id="pDR-wa-NUl"/>
+                                            <outlet property="icon" destination="5Lb-93-id3" id="YPy-hu-gi9"/>
+                                            <outlet property="iconImageView" destination="5Lb-93-id3" id="oOk-dH-AYQ"/>
+                                            <outlet property="itemName" destination="XPX-Hq-n1j" id="Gle-IX-E3L"/>
+                                            <outlet property="itemSubcribe" destination="GLj-6A-nZX" id="Yvl-DE-xYU"/>
+                                            <outlet property="nameLabel" destination="XPX-Hq-n1j" id="UhF-1a-IZx"/>
+                                            <outlet property="peopleSubcribeLabel" destination="GLj-6A-nZX" id="1lv-uE-3sv"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailCell" rowHeight="300" id="ffe-Cv-hfQ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemDetailCell" rowHeight="300" id="ffe-Cv-hfQ" customClass="DetailItemCell" customModule="Animate_Table" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="124" width="414" height="300"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ffe-Cv-hfQ" id="DQf-K2-LpZ">
@@ -126,6 +135,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="priceLabel" destination="FOh-Tg-QSH" id="uNV-jO-QMm"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -155,6 +167,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="Htd-On-jB8"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="tabBar" destination="GIX-ko-nm7" id="x5e-mh-SnX"/>
+                        <outlet property="tableView" destination="ZGn-D9-hEx" id="3Ud-BF-eiA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
