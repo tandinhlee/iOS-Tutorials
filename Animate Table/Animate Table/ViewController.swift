@@ -29,6 +29,7 @@ class ViewController: UIViewController {
         backButton.frame = CGRectMake(0, 0, 24, 40)
         let barButton = UIBarButtonItem(customView: backButton)
         navigationItem.leftBarButtonItem = barButton
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "navigationbar.png"), forBarMetrics: .Default)
         self.loadListFromFile("ListItem")
     }
 

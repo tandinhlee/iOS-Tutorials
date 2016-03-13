@@ -35,6 +35,7 @@
 		0D84302A1C94A50F00AB71F5 /* zara.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D8430181C94A50F00AB71F5 /* zara.png */; };
 		0D84302C1C94A5D100AB71F5 /* coach.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D84302B1C94A5D100AB71F5 /* coach.png */; };
 		0D84302E1C94A66F00AB71F5 /* prada.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D84302D1C94A66F00AB71F5 /* prada.png */; };
+		0D8430301C95916000AB71F5 /* navigationbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D84302F1C95916000AB71F5 /* navigationbar.png */; };
 		9BE246571C958DAC007F5AAC /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE246561C958DAC007F5AAC /* back.png */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,7 @@
 		0D8430181C94A50F00AB71F5 /* zara.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zara.png; sourceTree = "<group>"; };
 		0D84302B1C94A5D100AB71F5 /* coach.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coach.png; sourceTree = "<group>"; };
 		0D84302D1C94A66F00AB71F5 /* prada.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = prada.png; sourceTree = "<group>"; };
+		0D84302F1C95916000AB71F5 /* navigationbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigationbar.png; sourceTree = "<group>"; };
 		9BE246561C958DAC007F5AAC /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +119,7 @@
 		0D842FFC1C946BA800AB71F5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0D84302F1C95916000AB71F5 /* navigationbar.png */,
 				0D84302D1C94A66F00AB71F5 /* prada.png */,
 				0D84302B1C94A5D100AB71F5 /* coach.png */,
 				0D8430071C94A50F00AB71F5 /* adidas.png */,
@@ -214,6 +217,7 @@
 				0D84301E1C94A50F00AB71F5 /* dior.png in Resources */,
 				0D8430261C94A50F00AB71F5 /* nike.png in Resources */,
 				0D84302E1C94A66F00AB71F5 /* prada.png in Resources */,
+				0D8430301C95916000AB71F5 /* navigationbar.png in Resources */,
 				0D8430271C94A50F00AB71F5 /* ralphlauren.png in Resources */,
 				0D8430191C94A50F00AB71F5 /* adidas.png in Resources */,
 				0D8430211C94A50F00AB71F5 /* guess.png in Resources */,
