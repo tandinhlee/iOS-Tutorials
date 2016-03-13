@@ -43,6 +43,7 @@ class ViewController: UIViewController {
     
     func showHideNavigationController(show:Bool) {
         if show == true {
+            self.tabBar.hidden = false
             self.navigationController?.setNavigationBarHidden(false, animated: true)
         } else {
             self.navigationController?.setNavigationBarHidden(true, animated: true)
@@ -51,7 +52,6 @@ class ViewController: UIViewController {
         let timeNavigationShowHide = NSTimeInterval(UINavigationControllerHideShowBarDuration)
         UIView.animateWithDuration(timeNavigationShowHide, animations: { () -> Void in
             if show == true {
-                self.tabBar.hidden = false
                 self.tabBar.frame = CGRectMake(self.tabBar.frame.origin.x,
                     self.view.bounds.size.height - self.tabBar.frame.size.height,
                     self.tabBar.frame.size.width,
@@ -64,6 +64,7 @@ class ViewController: UIViewController {
                 self.tabBar.hidden = true
             }
             }) { (finish) -> Void in
+                
                 self.view.setNeedsUpdateConstraints()
         }
     }
