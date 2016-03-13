@@ -154,6 +154,12 @@ extension ViewController : UITableViewDelegate {
             self.fillData()
             self.tableView.beginUpdates()
             self.tableView.deleteRowsAtIndexPaths(delRowArray, withRowAnimation: UITableViewRowAnimation.Right)
+            for indexDelete in delRowArray {
+                let cell = tableView.cellForRowAtIndexPath(indexDelete)
+                UIView.animateWithDuration(0.3, animations: { () -> Void in
+                    cell?.layer.opacity = 0.1
+                })
+            }
             self.updateLayOutTable(tableView)
             self.tableView.endUpdates()
         }
@@ -175,6 +181,14 @@ extension ViewController : UITableViewDelegate {
             self.fillData()
             self.tableView.beginUpdates()
             self.tableView.insertRowsAtIndexPaths(arrayIndexAdd, withRowAnimation: UITableViewRowAnimation.Left)
+            
+            for indexDelete in arrayIndexAdd {
+                let cell = tableView.cellForRowAtIndexPath(indexDelete)
+                cell?.layer.opacity = 0.1
+                UIView.animateWithDuration(0.3, animations: { () -> Void in
+                    cell?.layer.opacity = 1.0
+                })
+            }
             self.updateLayOutTable(tableView)
             self.tableView.endUpdates()
         }
