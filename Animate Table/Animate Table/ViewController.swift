@@ -23,9 +23,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Rewind, target: self, action: "backTapped:")
+        let backButton = UIButton(type: .Custom)
+        backButton.setImage(UIImage(named: "back.png"), forState: .Normal)
+        backButton.addTarget(self, action: "backTapped:", forControlEvents: .TouchUpInside)
+        backButton.frame = CGRectMake(0, 0, 24, 40)
+        let barButton = UIBarButtonItem(customView: backButton)
+        navigationItem.leftBarButtonItem = barButton
         self.loadListFromFile("ListItem")
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,27 +47,24 @@ class ViewController: UIViewController {
         } else {
             self.navigationController?.setNavigationBarHidden(true, animated: true)
         }
+        
         let timeNavigationShowHide = NSTimeInterval(UINavigationControllerHideShowBarDuration)
         UIView.animateWithDuration(timeNavigationShowHide, animations: { () -> Void in
-//            if show == true {
-//                self.tabBar.frame = CGRectMake(self.tabBar.frame.origin.x,
-//                    self.tabBar.frame.origin.y + self.tabBar.frame.size.height,
-//                    self.tabBar.frame.size.width,
-//                    self.tabBar.frame.size.height)
-//                self.tabBar.hidden = true
-//            } else {
-//                self.tabBar.hidden = false
-//                self.tabBar.frame = CGRectMake(self.tabBar.frame.origin.x,
-//                    self.view.frame.size.height - self.tabBar.frame.size.height,
-//                    self.tabBar.frame.size.width,
-//                    self.tabBar.frame.size.height)
-//            }
-            // animation code
-            }) { (done) -> Void in
-                if done {
-                    self.view.setNeedsLayout()
-                  //complete animation
+            if show == true {
+                self.tabBar.hidden = false
+                self.tabBar.frame = CGRectMake(self.tabBar.frame.origin.x,
+                    self.view.bounds.size.height - self.tabBar.frame.size.height,
+                    self.tabBar.frame.size.width,
+                    self.tabBar.frame.size.height)
+            } else {
+                self.tabBar.frame = CGRectMake(self.tabBar.frame.origin.x,
+                    self.view.bounds.size.height + self.tabBar.frame.size.height,
+                    self.tabBar.frame.size.width,
+                    self.tabBar.frame.size.height)
+                self.tabBar.hidden = true
             }
+            }) { (finish) -> Void in
+                self.view.setNeedsUpdateConstraints()
         }
     }
     
@@ -76,33 +77,38 @@ class ViewController: UIViewController {
             }
             self.fillData()
             self.tableView.reloadData()
-            //let names: [String] = rootDict?.valueForKeyPath("name")
         }
     }
     
     private func fillData() {
+        debugPrint("FILL DATA: \(self.isViewFullList)")
         if (self.isViewFullList == false) {
             if self.rawData?.count > 2 {
                 self.displayData = NSArray(array: [self.rawData![0],self.rawData![1]])
             } else {
                 self.displayData = self.rawData
             }
-            //self.showHideNavigationController(false)
+            self.showHideNavigationController(false)
         } else {
             self.displayData = self.rawData
-            //self.showHideNavigationController(true)
+            self.showHideNavigationController(true)
         }
     }
     
 }
 extension ViewController : UITableViewDataSource {
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.displayData!.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let dictValueCell = self.displayData![indexPath.row] as? NSDictionary
         let cell = tableView.dequeueReusableCellWithIdentifier("itemListCell", forIndexPath: indexPath) as! ListItemCell
+        if (indexPath.row >= self.displayData?.count) {
+            debugPrint("OUT OF ARRAY HERE");
+            return cell;
+        }
+        let dictValueCell = self.displayData![indexPath.row] as? NSDictionary
         if (dictValueCell != nil) {
             cell.distanceLabel.text = dictValueCell!["distance"] as? String
             cell.descriptionLabel.text = dictValueCell!["description"] as? String
@@ -127,8 +133,12 @@ extension ViewController : UITableViewDelegate {
             return ListItemCell.HEIGHT_LIST_CELL_COLAPSE
         }
     }
+    func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return UIView(frame: CGRectZero)
+    }
     
     func trimTableView() {
+        debugPrint("TRIM: \(self.isViewFullList)")
         let countData = self.displayData?.count
         if (countData > 0) {
             var delRowArray = [NSIndexPath]()
@@ -148,6 +158,7 @@ extension ViewController : UITableViewDelegate {
         }
     }
     func addTableView() {
+        debugPrint("ADDD: \(self.isViewFullList)")
         let countData = self.rawData?.count
         if (countData > 0) {
             var arrayIndexAdd = [NSIndexPath]()
@@ -173,10 +184,8 @@ extension ViewController : UITableViewDelegate {
         for cell in tableView.visibleCells as! [ListItemCell] {
             if self.isViewFullList == true {
                 cell.colapseExpanseCell(false)
-                //self.showHideNavigationController(true)
             } else {
                 cell.colapseExpanseCell(true)
-                //self.showHideNavigationController(false)
             }
         }
     }
