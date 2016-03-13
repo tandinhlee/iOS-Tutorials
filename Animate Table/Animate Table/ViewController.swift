@@ -23,8 +23,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.loadListFromFile("ListItem")
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Rewind, target: self, action: "backTapped:")
+        self.loadListFromFile("ListItem")
 
     }
 
@@ -37,20 +37,31 @@ class ViewController: UIViewController {
         self.trimTableView()
     }
     
-    func showHideNavigationController() {
-        let isNavigationHiden = self.navigationController?.navigationBarHidden
-        if isNavigationHiden == true {
+    func showHideNavigationController(show:Bool) {
+        if show == true {
             self.navigationController?.setNavigationBarHidden(false, animated: true)
         } else {
             self.navigationController?.setNavigationBarHidden(true, animated: true)
         }
         let timeNavigationShowHide = NSTimeInterval(UINavigationControllerHideShowBarDuration)
-        
         UIView.animateWithDuration(timeNavigationShowHide, animations: { () -> Void in
+//            if show == true {
+//                self.tabBar.frame = CGRectMake(self.tabBar.frame.origin.x,
+//                    self.tabBar.frame.origin.y + self.tabBar.frame.size.height,
+//                    self.tabBar.frame.size.width,
+//                    self.tabBar.frame.size.height)
+//                self.tabBar.hidden = true
+//            } else {
+//                self.tabBar.hidden = false
+//                self.tabBar.frame = CGRectMake(self.tabBar.frame.origin.x,
+//                    self.view.frame.size.height - self.tabBar.frame.size.height,
+//                    self.tabBar.frame.size.width,
+//                    self.tabBar.frame.size.height)
+//            }
             // animation code
-            
             }) { (done) -> Void in
                 if done {
+                    self.view.setNeedsLayout()
                   //complete animation
             }
         }
@@ -76,8 +87,10 @@ class ViewController: UIViewController {
             } else {
                 self.displayData = self.rawData
             }
+            //self.showHideNavigationController(false)
         } else {
             self.displayData = self.rawData
+            //self.showHideNavigationController(true)
         }
     }
     
@@ -160,8 +173,10 @@ extension ViewController : UITableViewDelegate {
         for cell in tableView.visibleCells as! [ListItemCell] {
             if self.isViewFullList == true {
                 cell.colapseExpanseCell(false)
+                //self.showHideNavigationController(true)
             } else {
                 cell.colapseExpanseCell(true)
+                //self.showHideNavigationController(false)
             }
         }
     }

@@ -19,12 +19,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle-color" translatesAutoresizingMaskIntoConstraints="NO" id="4qW-lf-jsX">
+                                <rect key="frame" x="71" y="316" width="232" height="232"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4qW-lf-jsX" secondAttribute="height" multiplier="1:1" id="pVo-OQ-gpa"/>
+                                </constraints>
+                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZGn-D9-hEx">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemListCell" rowHeight="96" id="KIg-T1-em5" customClass="ListItemCell" customModule="Animate_Table" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="375" height="96"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="96"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KIg-T1-em5" id="len-QB-8jt">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="95"/>
@@ -104,13 +110,15 @@
                                 </items>
                             </tabBar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="GIX-ko-nm7" firstAttribute="top" secondItem="ZGn-D9-hEx" secondAttribute="bottom" id="JeD-SO-d0k"/>
                             <constraint firstItem="GIX-ko-nm7" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="NVN-XT-GQ7"/>
                             <constraint firstItem="GIX-ko-nm7" firstAttribute="leading" secondItem="ZGn-D9-hEx" secondAttribute="leading" id="QbV-6C-uaD"/>
                             <constraint firstAttribute="trailing" secondItem="GIX-ko-nm7" secondAttribute="trailing" id="c43-IB-bzU"/>
+                            <constraint firstItem="4qW-lf-jsX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eAW-xp-pRE"/>
                             <constraint firstItem="ZGn-D9-hEx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="fMQ-j7-sTC"/>
+                            <constraint firstItem="GIX-ko-nm7" firstAttribute="top" secondItem="4qW-lf-jsX" secondAttribute="bottom" constant="70" id="o0K-b3-EBC"/>
                             <constraint firstItem="GIX-ko-nm7" firstAttribute="trailing" secondItem="ZGn-D9-hEx" secondAttribute="trailing" id="oml-Id-svK"/>
                             <constraint firstItem="GIX-ko-nm7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="z2O-65-Dkl"/>
                         </constraints>
@@ -146,4 +154,7 @@
             <point key="canvasLocation" x="315" y="1089"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="circle-color" width="232" height="232"/>
+    </resources>
 </document>
