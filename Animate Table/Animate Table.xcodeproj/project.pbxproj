@@ -35,7 +35,7 @@
 		0D84302A1C94A50F00AB71F5 /* zara.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D8430181C94A50F00AB71F5 /* zara.png */; };
 		0D84302C1C94A5D100AB71F5 /* coach.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D84302B1C94A5D100AB71F5 /* coach.png */; };
 		0D84302E1C94A66F00AB71F5 /* prada.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D84302D1C94A66F00AB71F5 /* prada.png */; };
-		9BE246551C9515D6007F5AAC /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE246541C9515D6007F5AAC /* back.png */; };
+		9BE246571C958DAC007F5AAC /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE246561C958DAC007F5AAC /* back.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,7 +69,7 @@
 		0D8430181C94A50F00AB71F5 /* zara.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zara.png; sourceTree = "<group>"; };
 		0D84302B1C94A5D100AB71F5 /* coach.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coach.png; sourceTree = "<group>"; };
 		0D84302D1C94A66F00AB71F5 /* prada.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = prada.png; sourceTree = "<group>"; };
-		9BE246541C9515D6007F5AAC /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back.png; path = ../../../../../Downloads/back.png; sourceTree = "<group>"; };
+		9BE246561C958DAC007F5AAC /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +123,7 @@
 				0D8430081C94A50F00AB71F5 /* armani.png */,
 				0D8430091C94A50F00AB71F5 /* burberry.png */,
 				0D84300A1C94A50F00AB71F5 /* cartier.png */,
-				9BE246541C9515D6007F5AAC /* back.png */,
+				9BE246561C958DAC007F5AAC /* back.png */,
 				0D84300B1C94A50F00AB71F5 /* converse.png */,
 				0D84300C1C94A50F00AB71F5 /* dior.png */,
 				0D84300D1C94A50F00AB71F5 /* fendi.png */,
@@ -221,6 +221,7 @@
 				0D8430201C94A50F00AB71F5 /* gucci.png in Resources */,
 				0D8430291C94A50F00AB71F5 /* vans.png in Resources */,
 				0D8430251C94A50F00AB71F5 /* michaelkors.png in Resources */,
+				9BE246571C958DAC007F5AAC /* back.png in Resources */,
 				0D8430231C94A50F00AB71F5 /* hermes.png in Resources */,
 				0D842FFB1C93EAD400AB71F5 /* ListItem.plist in Resources */,
 				0D84302C1C94A5D100AB71F5 /* coach.png in Resources */,
@@ -234,7 +235,6 @@
 				0D842FE91C91EB0800AB71F5 /* Main.storyboard in Resources */,
 				0D84301F1C94A50F00AB71F5 /* fendi.png in Resources */,
 				0D84302A1C94A50F00AB71F5 /* zara.png in Resources */,
-				9BE246551C9515D6007F5AAC /* back.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
