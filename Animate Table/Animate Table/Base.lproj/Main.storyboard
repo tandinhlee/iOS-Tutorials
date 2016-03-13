@@ -110,7 +110,7 @@
                                 </items>
                             </tabBar>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="GIX-ko-nm7" firstAttribute="top" secondItem="ZGn-D9-hEx" secondAttribute="bottom" id="JeD-SO-d0k"/>
                             <constraint firstItem="GIX-ko-nm7" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="NVN-XT-GQ7"/>
